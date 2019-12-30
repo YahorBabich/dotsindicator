@@ -82,7 +82,7 @@ class DotsIndicator @JvmOverloads constructor(context: Context, attrs: Attribute
 
         background.setColor(if (pager!!.currentItem == index) selectedDotColor else dotsColor)
 
-        imageView.setBackgroundDrawable(background)
+        imageView.background = background
 
         dot.setOnClickListener {
             if (dotsClickable && index < pager?.count ?: 0) {
@@ -155,15 +155,11 @@ class DotsIndicator @JvmOverloads constructor(context: Context, attrs: Attribute
             background.setColor(dotsColor)
         }
 
-        elevationItem.setBackgroundDrawable(background)
+        elevationItem.background = background
         elevationItem.invalidate()
     }
 
     override val type get() = DEFAULT
-
-    //*********************************************************
-    // Users Methods
-    //*********************************************************
 
     @Deprecated("Use setSelectedDotColor() instead", ReplaceWith("setSelectedDotColor()"))
     fun setSelectedPointColor(color: Int) {
