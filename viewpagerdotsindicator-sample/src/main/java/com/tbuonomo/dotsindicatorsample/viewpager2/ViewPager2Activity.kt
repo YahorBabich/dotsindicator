@@ -8,8 +8,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.tbuonomo.dotsindicatorsample.R
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import com.tbuonomo.viewpagerdotsindicator.Profile
-import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 class ViewPager2Activity : AppCompatActivity() {
 
@@ -21,8 +19,8 @@ class ViewPager2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_view_pager2)
 
         val dotsIndicator = findViewById<DotsIndicator>(R.id.dots_indicator)
-        val springDotsIndicator = findViewById<SpringDotsIndicator>(R.id.spring_dots_indicator)
-        val wormDotsIndicator = findViewById<WormDotsIndicator>(R.id.worm_dots_indicator)
+        /*val springDotsIndicator = findViewById<SpringDotsIndicator>(R.id.spring_dots_indicator)
+        val wormDotsIndicator = findViewById<WormDotsIndicator>(R.id.worm_dots_indicator)*/
 
         /*val p = mutableListOf<String>()
         p.add("100")
