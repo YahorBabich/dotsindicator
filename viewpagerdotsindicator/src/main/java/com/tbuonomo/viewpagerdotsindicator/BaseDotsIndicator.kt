@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -36,20 +35,6 @@ abstract class BaseDotsIndicator @JvmOverloads constructor(context: Context,
                 R.styleable.SpringDotsIndicator_dotsSize,
                 R.styleable.SpringDotsIndicator_dotsSpacing,
                 R.styleable.SpringDotsIndicator_dotsCornerRadius),
-        SPRING(16f,
-                4f,
-                R.styleable.DotsIndicator,
-                R.styleable.DotsIndicator_dotsColor,
-                R.styleable.DotsIndicator_dotsSize,
-                R.styleable.DotsIndicator_dotsSpacing,
-                R.styleable.DotsIndicator_dotsCornerRadius),
-        WORM(16f,
-                4f,
-                R.styleable.WormDotsIndicator,
-                R.styleable.WormDotsIndicator_dotsColor,
-                R.styleable.WormDotsIndicator_dotsSize,
-                R.styleable.WormDotsIndicator_dotsSpacing,
-                R.styleable.WormDotsIndicator_dotsCornerRadius)
     }
 
     @JvmField
@@ -238,12 +223,6 @@ abstract class BaseDotsIndicator @JvmOverloads constructor(context: Context,
     }
 
     fun <T> ArrayList<T>.isInBounds(index: Int) = index in 0 until size
-
-    fun Context.getThemePrimaryColor(): Int {
-        val value = TypedValue()
-        this.theme.resolveAttribute(R.attr.colorPrimary, value, true)
-        return value.data
-    }
 
     protected val ViewPager2.isNotEmpty: Boolean get() = adapter!!.itemCount > 0
 
